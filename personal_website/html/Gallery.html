@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+<!--Menu Bar-->
+a:hover {
+  opacity: 0.7;
+  color: blue;
+  background-color: white;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  margin-left: -40px;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: rgb(255, 255, 255);
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+
+<!--
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+    #click:checked ~ ul{
+    left: 0;
+  }
+    #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  -->
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    
+  }
+
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: rgb(240, 154, 25);
+  }
+} 
+</style>
+<style>
+
+:root {
+	/* Base font size */
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #fafafa;
+}
+
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
+
+.heading span {
+	display: block;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
+</style>
+<nav>
+         <div class="logo">
+            Pranav S R
+         </div>
+         <input type="checkbox" id="click">
+         <label for="click" class="menu-btn">
+         <i class="fas fa-bars"></i>
+         </label>
+         <ul>
+            <li><a class="active" href="../index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="Education.html">Education</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+			 <li><a href="https://www.instagram.com/pranav__aji10/"target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://twitter.com/pranav_sr10"target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/pranav-s-r-738504236/"target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/Pranav10112003"target="_blank"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNqLRvsnCRQvcSGfhMRggQvsxrspQmgldSxlgGfMZcWxMmgzlSWxRRbDpRtGcFCNqxpxBV"target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+        
+         </ul>
+      </nav>
+	  <div class="container">
+
+	<h1 class="heading">My Gallery </h1>
+
+	<div class="gallery">
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="../images/5.jpg" alt="Image">
+		</div>
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="../images/6.jpeg" alt="Image">
+		</div>
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="../images/7.jpg" alt="Image">
+		</div>
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="../images/8.jpg" alt="Image">
+		</div>
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="../images/9.jpg" alt="Image">
+		</div>
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="../images/10.jpg" alt="Image">
+		</div>
+
+	</div>
+
+</div>
+</html>
