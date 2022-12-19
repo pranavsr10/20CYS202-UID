@@ -87,6 +87,23 @@ button {
         border-radius: 50px;
     }
 </style>
+  <script>
+function admSelectCheck(nameSelect)
+{
+    if(nameSelect){
+        admOptionValue = document.getElementById("admOption").value;
+        if(admOptionValue == nameSelect.value){
+            document.getElementById("admDivCheck").style.display = "block";
+        }
+        else{
+            document.getElementById("admDivCheck").style.display = "none";
+        }
+    }
+    else{
+        document.getElementById("admDivCheck").style.display = "none";
+    }
+}
+</script>
 </head>
 <div class="logo">
                 <img src="../Images/2.png">
@@ -118,6 +135,23 @@ button {
         <input type="text" id="city" name="city" />
         <label for="state"></label>
         <input type="text" id="postal-code" name="postal-code" />
+          <div>  
+<label>   
+Branch:  
+</label>     
+<select name="organisation" class="form-control" id="getFname" onchanwwge="admSelectCheck(this);">  
+<option value="CSE">CSE</option>  
+<option value="CYS">CYS</option>  
+<option value="AI">AI</option>  
+<option value="MECH">MECH</option>  
+<option value="ECE">ECE</option>  
+<option value="ELC">ELC</option>  
+<option id="admOption" value="0">Others</option>
+</select>  
+<div class="form-group" id="admDivCheck" style="display: none;">
+<input type="text" name="organisation" class="form-control" placeholder="" />
+</div>
+</div>
       </fieldset>
       <fieldset>
        <!-- <h3>Additional Information</h3>
